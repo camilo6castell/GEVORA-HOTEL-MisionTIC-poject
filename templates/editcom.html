@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="container-fluid row align-items-start">
-        <div class="container-fluid col-2 text-start"><a href="{{ url_for('home') }}" class="btn btn-dark" style="margin: 10px;"> Atrás </a></div> 
+        <div class="container-fluid col-2 text-start"><a href="/home" class="btn btn-dark" style="margin: 10px;"> Atrás </a></div> 
         <div class="col-2"></div>
         <div class="col-4"><img src="\static\images\gevora.png" alt="Gevora hotel" width="150"></div>
         <div class="col-2"></div>
@@ -38,21 +38,21 @@
                             </div>
                             </td>
                             <td>
-                                <form action="/editcom/{{i}}/2/" method="post">
-                                <input style="visibility: hidden" name="id" value="{{ row[j][0] }}">
-                                <p><input type="text" name="stars" value="{{ row[j][3] }}" size="1"></p>
-                                <p><button type="submit" class="btn btn-success">Guardar</button></p>
+                                <form action="/editcom/{{i}}/es" method="post">
+                                <input type="text" name="stars" value="{{ row[j][3] }}" size="1">
+                                <p><input style="visibility: hidden" name="id" value="{{ row[j][0] }}"></p>
+                                <button type="submit" class="btn btn-success">Guardar</button>
                                 </form>
                             </td>
                             <td>
-                                <form action="/editcom/{{i}}/1/" method="post">
-                                <input style="visibility: hidden" name="id" value="{{ row[j][0] }}">
+                                <form action="/editcom/{{i}}/co" method="post">
+                                <p><input style="visibility: hidden" name="id" value="{{ row[j][0] }}"></p>
                                 <textarea name="coment" id="" cols="30" rows="2">{{ row[j][4] }}</textarea>
                                 <p><button type="submit" class="btn btn-success">Guardar</button></p>
                                 </form>
                             </td>
                             <td>
-                                <form action="/editcom/{{i}}/{{ row[j][0] }}/" method="post">
+                                <form action="/editcom/{{i}}/del" method="post">
                                 <input style="visibility: hidden" name="id" value="{{ row[j][0] }}">
                                 <p><button type="submit" class="btn btn-danger">Eliminar</button></p>
                                 </form>

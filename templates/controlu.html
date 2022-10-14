@@ -7,9 +7,9 @@
 <div class="container-fluid">
     <div class="container-fluid row align-items-start">
         {% if session.get('usuario') == "Superadmin1@superadmin1.com" %}
-        <div class="container-fluid col-2 text-start"><a href="{{ url_for('homesa',a=0) }}" class="btn btn-dark" style="margin: 10px;"> Atrás </a></div>
+        <div class="container-fluid col-2 text-start"><a href="/home/sa" class="btn btn-dark" style="margin: 10px;"> Atrás </a></div>
         {% else %} 
-        <div class="container-fluid col-2 text-start"><a href="{{ url_for('homea',a=0) }}" class="btn btn-dark" style="margin: 10px;"> Atrás </a></div>
+        <div class="container-fluid col-2 text-start"><a href="/home/a" class="btn btn-dark" style="margin: 10px;"> Atrás </a></div>
         {% endif %}
         <div class="col-2"></div>
         <div class="col-4"><img src="\static\images\gevora.png" alt="Gevora hotel" width="150"></div>
@@ -46,7 +46,7 @@
                             </td>
                             <td>
                                 <p>
-                                    <form action="/controlu/1/{{rowRaw[i][0]}}/" method="post">
+                                    <form action="/controlu/{{rowRaw[i][0]}}" method="post">
                                     <button type="submit" class="btn btn-danger">Eliminar</button>
                                     </form>
                                 </p>

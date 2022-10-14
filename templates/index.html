@@ -10,13 +10,13 @@
 <br>
 <h3 id="enunciado">Por favor inicie sesión para acceder a nuestros servicios:</h3>
 <br>
-<form action="{{url_for('log_in')}}" method="post" name="log_in_form" id="log_in_form">
+<form action="/login" method="post" name="log_in_form" id="log_in_form">
     <p><label for="user">Usuario: <input type="text" name="user" id="user" placeholder="********"></label></p>
     <p><label for="pass">Contraseña: <input type="password" name="pass" id="pass" placeholder="********"></label> <img src="static\images\viewpass.png" alt="theeyethatseeseverything" id="showpass" width="30" title="Mostrar password"></p>
     <button type="submit" id="btnShowPass">Ingresar!</button>
 </form>
 <br>
-<p>¿No tienes una cuenta? <a class="link" href="/registro/" title="¡Para poder hacer reservas y puntuarnos!">¡registrate acá!</a></p>
+<p>¿No tienes una cuenta? <a class="link" href="/signup" title="¡Para poder hacer reservas y puntuarnos!">¡registrate acá!</a></p>
 
 <script src="{{ url_for('static', filename='js/index.js') }}"></script>  
 
